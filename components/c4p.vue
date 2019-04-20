@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss" scoped>
 .c4p {
-    background: $color-primary;
+    background: $color-1;
     padding: 10px;
     box-sizing: border-box;
     position: fixed;
@@ -50,7 +50,7 @@ export default {
 
 a {
     font-weight: bold;
-    color: $color-dark;
+    color: $color-4;
 }
 .close-c4p {
     cursor: pointer;

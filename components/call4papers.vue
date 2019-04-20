@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="content size margin">
       <div class="buy-tickets box-title">
-        <div class="buy-tickets--text text-align-left">
-          <h3>Comprar Ticket</h3>
+        <div class="buy-tickets--text text-align-center">
+          <h3>Está aberta a chamada para o CALL4PAPERS!</h3>
         </div>
         <div class="buy-tickets--button">
           <a target="_blank" href="http://bit.ly/2jttFlx" class="btn btn-lg btn-primary"><i class="fas fa-arrow-right"></i></a>

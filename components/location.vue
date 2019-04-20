@@ -33,28 +33,25 @@
       </div>
     </div>
 
-    <div class="rect-animation rellax" data-rellax-speed="4" data-rellax-percentage="1" style="right: -150px; bottom: 50px;"></div>
-    <div class="rect-animation rellax" data-rellax-speed="4" data-rellax-percentage="1" style="left: -250px; top: 200px;"></div>
-
   </div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style lang="scss" scoped>
 .location {
-    .map-content {
-        box-shadow: -50px 50px 0 0 $color-primary;
-        margin-left: 100px;
-        height: 400px;
-        background: #ddd;
-        margin-top: 50px;
-        @media screen and (max-width: 720px) {
-            margin-left: 0;
-        }
+  .map-content {
+    box-shadow: -50px 50px 0 0 $color-1;
+    margin-left: 100px;
+    height: 400px;
+    background: #ddd;
+    margin-top: 50px;
+    @media screen and (max-width: 720px) {
+      margin-left: 0;
     }
+  }
 }
 .container-location {
   li {

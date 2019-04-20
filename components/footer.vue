@@ -20,9 +20,6 @@
           </ul>
         </div>
 
-        <div class="rect-animation light rellax" data-rellax-speed="4" data-rellax-percentage="1" style="left: 0; top: -100px;"></div>
-        <div class="rect-animation dark rellax" data-rellax-speed="4" data-rellax-percentage="1" style="right: -150px; top: 0;"></div>
-
       </div>
 
     </div>
@@ -30,62 +27,55 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style lang="scss" scoped>
 .footer {
-    padding: 100px 50px;
-    background: $color-primary;
-    background: url("~/assets/images/icon.svg"), $color-primary;
-    background-position: bottom left;
-    background-size: 300px;
-    background-repeat: no-repeat;
-    width: 100%;
-    @media screen and (max-width: 980px) {
-        background: $color-primary;
+  padding: 100px 50px;
+  width: 100%;
+  @media screen and (max-width: 980px) {
+    background: $color-1;
+  }
+  .box--footer {
+    padding: 20px;
+    box-sizing: border-box;
+    strong {
+      font-size: 16px;
     }
-    .box--footer {
-        padding: 20px;
-        box-sizing: border-box;
-        strong {
-            font-size: 16px;
-        }
-
-    }
+  }
 }
 .box--footer ul {
-    margin-top: 20px;
-    list-style: none;
-    li {
-        margin-bottom: 10px;
-        a {
-            color: $color-dark;
-            &:hover {
-                color: #fff;
-            }
-        }
+  margin-top: 20px;
+  list-style: none;
+  li {
+    margin-bottom: 10px;
+    a {
+      color: $color-1;
+      &:hover {
+        color: #fff;
+      }
     }
-
+  }
 }
 .box--footer .social {
-    li a {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        background: transparent;
-        border: 1px solid $color-dark;
-        color: $color-dark;
-        border-radius: 50%;
-        margin-right: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.3s;
-        &:hover {
-            background: $color-dark;
-            color: $color-primary;
-        }
+  li a {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background: transparent;
+    border: 1px solid $color-4;
+    color: $color-4;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    &:hover {
+      background: $color-4;
+      color: $color-1;
     }
+  }
 }
 </style>

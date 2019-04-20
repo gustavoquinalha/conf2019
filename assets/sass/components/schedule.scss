@@ -1,0 +1,99 @@
+.schedule {
+  margin: 0 auto;
+  width: 800px;
+  max-width: 100%;
+
+  .schedule--item {
+    padding-bottom: 100px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    .schedule--item--ball {
+      width: 100px;
+
+      .line {
+        width: 5px;
+        height: 100%;
+        transform: translateY(20px);
+        background: $color-1;
+        display: block;
+        position: absolute;
+      }
+
+      .ball {
+        width: 25px;
+        height: 25px;
+        border: 7px solid $color-1;
+        background: $color-4;
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &.active {
+      color: $color-1;
+
+      .schedule--item--description {
+        background: url("~/assets/images/box-4.svg");
+        background-position: center center;
+        background-size: cover;
+        color: $color-white;
+
+        .subtitle {
+          color: $color-1;
+        }
+      }
+
+      .ball {
+        background: $color-1;
+        transform: scale(1.5, 1.5);
+        box-shadow: 0 0 0 4px $color-4;
+      }
+    }
+
+    .schedule--item--description {
+      @media (max-width: 768px) {
+        h4 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .schedule--item:last-child .schedule--item--ball .line {
+    display: none;
+  }
+}
+
+.schedule--item--time {
+  width: 100px;
+  font-size: 1.5rem;
+}
+
+.schedule--item--description {
+  width: 100%;
+  background: $color-3;
+  padding: 24px;
+
+  p {
+    opacity: .7;
+  }
+
+  .title {
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    margin-bottom: 20px;
+    display: block;
+  }
+}

@@ -6,7 +6,7 @@
 
           <div class="menu--content--logo flex-grow-1">
             <router-link to="#home">
-              <img src="../assets/images/logo.svg" width="100" alt="Logo devparaná">
+              <img src="~/assets/images/logo.svg" width="100%" alt="Logo DevParaná 2019">
             </router-link>
           </div>
 
@@ -29,9 +29,6 @@
                 <li>
                   <router-link to="#speakers">Palestrantes</router-link>
                 </li>
-                <!-- <li>
-                <router-link to="#schedule">Agenda</router-link>
-                </li> -->
                 <li>
                   <router-link to="#tickets">Ingressos e mais</router-link>
                 </li>
@@ -56,39 +53,39 @@ export default {
   data() {
     return {
       showMenu: false
-    }
+    };
   },
   mounted() {
-    var scroll = new SmoothScroll('a[href*="#"]')
+    var scroll = new SmoothScroll('a[href*="#"]');
 
-    let vm = this
-    var links = this.$el.querySelectorAll('.menu--content--links nav ul li a')
+    let vm = this;
+    var links = this.$el.querySelectorAll(".menu--content--links nav ul li a");
 
-    window.addEventListener('scroll', function() {
-      var scrollpos = window.scrollY
+    window.addEventListener("scroll", function() {
+      var scrollpos = window.scrollY;
       var menuClass = document.querySelector(".menu");
 
-      scrollpos = window.scrollY
+      scrollpos = window.scrollY;
       if (scrollpos > 600) {
         menuClass.classList.add("menu-fixed");
       } else {
-        menuClass.classList.remove("menu-fixed")
+        menuClass.classList.remove("menu-fixed");
       }
-    })
+    });
 
     function closeMenu() {
-      vm.showMenu = false
+      vm.showMenu = false;
       links.forEach(function(link) {
-        link.classList.remove("active")
-      })
+        link.classList.remove("active");
+      });
     }
 
     links.forEach(function(link) {
-      link.addEventListener('click', function() {
+      link.addEventListener("click", function() {
         closeMenu();
-        link.classList.add("active")
-      })
-    })
+        link.classList.add("active");
+      });
+    });
 
     // var elm = document.querySelector('.menu--content--links')
     // var ms = new MenuSpy(elm, {
@@ -96,122 +93,122 @@ export default {
     //   hashTimeout: 2000
     // })
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-$size-menu: 15vh;
-.fa {
-    font-size: 22px;
-    cursor: pointer;
-    &:hover {
-        color: $color-primary;
-    }
-}
-
+$size-menu: 60px;
 .menu--relative {
-    position: relative;
-    min-height: $size-menu;
+  position: relative;
+  height: $size-menu;
+  padding-top: 40px;
 }
 
 .menu {
-    width: 100%;
-    @keyframes showMenu {
-        from {
-            opacity: 0;
-        }
-        to {}
+  width: 100%;
+  @keyframes showMenu {
+    from {
+      opacity: 0;
     }
-    .menu--content {
-        min-height: $size-menu;
-        .menu--content--logo {
-            img {
-                display: none;
-                max-width: 100%;
-            }
-        }
-        .menu--content--links {
-            ul {
-                list-style: none;
-                li {
-                    margin: 10px;
-                    a {
-                        color: #fff;
-                        text-transform: uppercase;
-                        font-weight: 800;
-                        font-size: 14px;
-                        &.active,
-                        &:hover {
-                            border-bottom: 5px solid $color-primary;
-                            padding-bottom: 10px;
-                        }
-                    }
-                }
-            }
-            @media (max-width: 980px) {
-                display: none;
-            }
-            .menu-close {
-                display: none;
-            }
-            &.menu-responsive {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: fixed;
-                top: 0;
-                left: 0;
-                height: 100vh;
-                width: 100%;
-                z-index: 12;
-                background: rgba($color-dark, .9);
-                ul li {
-                    margin-bottom: 30px;
-                    a {
-                        font-size: 2rem;
-                    }
-                }
-                .container {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                }
-                .menu-close {
-                    display: flex;
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
-                }
-                animation: showMenu 0.3s backwards;
-            }
-        }
-        .menu--content--hamburger {
-            display: none;
-            @media (max-width: 980px) {
-                display: flex;
-            }
-        }
+    to {
     }
-    &.menu-fixed {
-        position: fixed;
-        animation: showMenu 0.5s backwards;
-        z-index: 11;
-        background: $color-dark;
-        box-shadow: 0 2px 20px 0 rgba(0,0,0,.2);
+  }
+  .menu--content {
+    height: $size-menu;
+    // padding-top: 40px;
+    .menu--content--logo {
+      img {
+        width: 60px;
+        max-width: 100%;
+      }
+    }
 
-        .menu--content {
-            min-height: 80px;
-            @media (max-width: 980px) {
-                background: transparent;
-            }
-            .menu--content--logo {
-                img {
-                    display: block;
-                    width: 50px;
-                }
-            }
-        }
+    .menu--content--hamburger {
+      display: none;
+      @media (max-width: 980px) {
+        display: flex;
+      }
     }
+  }
+  &.menu-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: showMenu 0.5s backwards;
+    z-index: 11;
+    background: $color-4;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+
+    .menu--content {
+      min-height: 80px;
+      padding-top: 0;
+      @media (max-width: 980px) {
+        background: transparent;
+      }
+      .menu--content--logo {
+        img {
+          display: block;
+          width: 50px;
+        }
+      }
+    }
+  }
+}
+
+.menu--content--links {
+  ul {
+    list-style: none;
+    li {
+      margin: 10px;
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 14px;
+        &.active,
+        &:hover {
+          border-bottom: 5px solid $color-1;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+  @media (max-width: 980px) {
+    display: none;
+  }
+  .menu-close {
+    display: none;
+  }
+  &.menu-responsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 12;
+    background: rgba($color-4, 0.9);
+    ul li {
+      margin-bottom: 30px;
+      a {
+        font-size: 2rem;
+      }
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .menu-close {
+      display: flex;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+    animation: showMenu 0.3s backwards;
+  }
 }
 </style>

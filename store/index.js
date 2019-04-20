@@ -207,14 +207,14 @@ de dados públicas em formatos acessíveis.`
       title: '1° Lote',
       date: '05 de Maio até 31 de Maio',
       link: 'https://www.sympla.com.br/devparana-conference-2018__281357',
-      soldout: true
+      soldout: false
     }, {
       id: 3,
       value: 65,
       title: '2° Lote',
       date: '01 de Junho até 30 de Junho',
       link: 'https://www.sympla.com.br/devparana-conference-2018__281357',
-      soldout: true
+      soldout: false
     },
     {
       id: 4,
@@ -222,7 +222,7 @@ de dados públicas em formatos acessíveis.`
       title: '3° Lote',
       date: '01 de Julho até 26 de Julho',
       link: 'https://www.sympla.com.br/devparana-conference-2018__281357',
-      soldout: true
+      soldout: false
     }
   ],
   sponsors: [{

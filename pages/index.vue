@@ -1,52 +1,55 @@
 <template lang="html">
   <div>
-    <about />
+    <socialFixed/>
+    <headerTop/>
+    <call4papers />
     <speakers />
-    <!-- <buytickets /> -->
-    <!-- <call4papers /> -->
+    <buytickets />
     <schedule />
     <tickets />
     <location />
     <contact />
-    <div class="sponsors-support--bg">
+    <div class="bg-footer">
       <sponsors />
-      <support />
+      <footerBottom/>
     </div>
   </div>
 </template>
 
 <script>
-import about from "@/pages/home/components/about";
-import schedule from "@/pages/home/components/schedule";
-// import buytickets from "@/components/buytickets";
-// import call4papers from "@/pages/home/components/call4papers";
-import speakers from "@/pages/home/components/speakers";
-import tickets from "@/pages/home/components/tickets";
-import location from "@/pages/home/components/location";
-import contact from "@/pages/home/components/contact";
-import sponsors from "@/pages/home/components/sponsors";
-import support from "@/pages/home/components/support";
+import socialFixed from "@/components/social-fixed";
+import headerTop from "@/components/header";
+import schedule from "@/components/schedule";
+import buytickets from "@/components/buytickets";
+import call4papers from "@/components/call4papers";
+import speakers from "@/components/speakers";
+import tickets from "@/components/tickets";
+import location from "@/components/location";
+import contact from "@/components/contact";
+import sponsors from "@/components/sponsors";
+import footerBottom from "@/components/footer";
 
 export default {
   components: {
-    about,
-    // call4papers,
+    socialFixed,
+    headerTop,
+    call4papers,
     schedule,
-    // buytickets,
+    buytickets,
     speakers,
     tickets,
     location,
     contact,
     sponsors,
-    support
+    footerBottom
   }
-}
+};
 </script>
 
 <style lang="scss">
 .sponsors-support--bg {
-    background: $color-white;
-    padding-top: 100px;
-    padding-bottom: 100px;
+  background: $color-white;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 </style>

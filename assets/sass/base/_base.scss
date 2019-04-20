@@ -1,10 +1,10 @@
 .size {
-  width: 1200px;
+  width: 1366px;
   max-width: 90%;
 }
 
 .size-padding {
-  width: calc(1200px + 40px);
+  width: calc(1366px + 40px);
   max-width: 90%;
 }
 
@@ -22,4 +22,12 @@
 
 .full-width {
   width: 100%;
+}
+
+.bg-footer {
+  background: $color-4;
+  background: url("~/assets/images/footer.svg"), $color-4;
+  background-position: bottom center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }

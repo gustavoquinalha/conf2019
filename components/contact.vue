@@ -108,20 +108,16 @@
       <div class="contact--text flex-basis-400 flex-grow-2 container align-center">
         <div class="">
           <h2>
-                  <span>ENVIE</span>
-                  <span>SUAS</span>
-                  <span>DÚVIDAS</span>
-                </h2>
+            <span>ENVIE</span>
+            <span>SUAS</span>
+            <span>DÚVIDAS</span>
+          </h2>
           <p>Entre em contato conosco que lhe
             <br> responderemos o mais rápido possível.</p>
         </div>
       </div>
 
     </div>
-
-    <div class="rect-animation rellax" data-rellax-speed="4" data-rellax-percentage="0.1" style="left: -200px; bottom: 300px;"></div>
-    <div class="rect-animation rellax" data-rellax-speed="4" data-rellax-percentage="1" style="right: 100px; top: 200px;"></div>
-    <div class="rect-animation rellax" data-rellax-speed="4" data-rellax-percentage="1" style="right: -200px; bottom: 200px;"></div>
 
   </div>
 </template>
@@ -149,32 +145,44 @@ export default {
   methods: {
     getToken() {
       if (this.$data.contact.token === null) {
-        fetch("https://wn3smey42d.execute-api.us-east-1.amazonaws.com/production/createToken", {
-          method: "POST"
-        }).then(data => data.json()).then(body => {
-          this.$data.contact.token = body.token;
-        }).catch(err => {
-          console.error(err);
-        });
+        fetch(
+          "https://wn3smey42d.execute-api.us-east-1.amazonaws.com/production/createToken",
+          {
+            method: "POST"
+          }
+        )
+          .then(data => data.json())
+          .then(body => {
+            this.$data.contact.token = body.token;
+          })
+          .catch(err => {
+            console.error(err);
+          });
       }
     },
     send() {
-      this.$validator.validateAll().then((result) => {
+      this.$validator.validateAll().then(result => {
         if (result) {
           this.getToken();
           if (!Object.values(this.$data.contact).includes(null)) {
-            fetch("https://wn3smey42d.execute-api.us-east-1.amazonaws.com/production/sendEmail", {
-              method: "POST",
-              body: JSON.stringify(this.$data.contact)
-            }).then(data => data.json()).then(body => {
-              if (body.status === "ok") {
-                this.success = true
+            fetch(
+              "https://wn3smey42d.execute-api.us-east-1.amazonaws.com/production/sendEmail",
+              {
+                method: "POST",
+                body: JSON.stringify(this.$data.contact)
               }
-            }).catch(err => {
-              this.success = false;
-              this.error = true;
-              console.error(err);
-            });
+            )
+              .then(data => data.json())
+              .then(body => {
+                if (body.status === "ok") {
+                  this.success = true;
+                }
+              })
+              .catch(err => {
+                this.success = false;
+                this.error = true;
+                console.error(err);
+              });
           }
           return;
         }
@@ -189,35 +197,35 @@ export default {
 
 <style lang="scss" scoped="scoped">
 .alert {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .contact {
-    p {
-        opacity: 0.7;
+  p {
+    opacity: 0.7;
+  }
+  .container--form-block {
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  .contact--text {
+    background: url("~/assets/images/contact.jpg");
+    background-position: center right;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    padding: 0 50px;
+    box-sizing: border-box;
+    > div {
+      transform: translateY(-100px);
     }
-    .container--form-block {
-        padding: 50px;
-        box-sizing: border-box;
-    }
+  }
+  @media (max-width: 768px) {
     .contact--text {
-        background: url("~/assets/images/contact.jpg");
-        background-position: center right;
-        background-size: 90%;
-        background-repeat: no-repeat;
-        padding: 0 50px;
-        box-sizing: border-box;
-        > div {
-            transform: translateY(-100px);
-        }
+      background: none;
+      > div {
+        transform: translateY(0);
+      }
     }
-    @media (max-width: 720px) {
-        .contact--text {
-            background: none;
-            > div {
-                transform: translateY(0);
-            }
-        }
-    }
+  }
 }
 </style>

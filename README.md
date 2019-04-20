@@ -23,13 +23,13 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 
 ## Colors
 > green/black
-- $color-primary: #15a04b;
-- $color-primary-light: #a0d8b6;
+- $color-1: #15a04b;
+- $color-2: #a0d8b6;
 - $color-white: #ffffff;
-- $color-dark: #072211;
+- $color-4: #072211;
 
 > red/blue
-- $color-primary: #f53855;
-- $color-primary-light: #F98E9E;
+- $color-1: #f53855;
+- $color-2: #F98E9E;
 - $color-white: #fff;
-- $color-dark: #10145b;
+- $color-4: #10145b;
