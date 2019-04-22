@@ -1,4 +1,11 @@
 .speakers {
+  background-image: url("~/assets/images/speakers.svg"), url("~/assets/images/speakers-2.svg");
+  background-position: top center, bottom center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.speakers-container {
   margin: -40px;
 }
 

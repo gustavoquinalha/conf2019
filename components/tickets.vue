@@ -1,77 +1,82 @@
 <template>
-  <div class="size margin content" id="tickets">
-    <div class="container align-center">
-      <div class="box-title text-align-center">
-        <h2>Ingressos</h2>
+  <div class="tickets">
+    <div class="size margin content" id="tickets">
+      <div class="container align-center">
+        <div class="box-title text-align-center">
+          <h2>Ingressos</h2>
+        </div>
       </div>
-    </div>
 
-    <div class="tickets container wrap">
-      <div
-        class="tickets--item col-12 col-xs-6 col-sm-4 col-md-3 col-lg-3"
-        v-for="ticket in tickets"
-        :key="ticket.id"
-      >
+      <div class="container wrap">
         <div
-          class="tickets--item--content container column"
-          :class="{ active :  currentticket === ticket.id, soldout : ticket.soldout}"
-          v-on:mouseover="currentticket = ticket.id"
+          class="tickets--item col-12 col-xs-6 col-sm-6 col-md-6 col-lg-3"
+          :class="'ticket-' + ticket.id"
+          v-for="ticket in tickets"
+          :key="ticket.id"
         >
-          <div class="tickets-border">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="soldout-span" v-if="ticket.soldout">
-            <div class="span">ESGOTADO</div>
-          </div>
-
-          <div class="tickets-title text-align-center">{{ticket.title}}</div>
-
-          <div class="tickets-text">
-            <div class="tickets-text-event">
-              <div>Dev</div>
-              <div>Paraná</div>
-              <div>Conf 2019</div>
+          <div
+            class="tickets--item--content container column"
+            :class="{ active :  currentticket === ticket.id, soldout : ticket.soldout}"
+            v-on:mouseover="currentticket = ticket.id"
+          >
+            <div class="tickets-border">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <div class="tickets-text-date">
-              <div class="tickets-span">Data</div>
-              {{ticket.date}}
-            </div>
-            <div class="tickets-text-value">
-              <div class="tickets-span">Valor</div>
-              {{'R$' + ticket.value}}
-            </div>
-          </div>
 
-          <div class="tickets-btn" v-show="!ticket.soldout">
-            <a :href="ticket.link" class="btn btn-primary">Comprar tickets</a>
-          </div>
+            <div class="soldout-span" v-if="ticket.soldout">
+              <div class="span">ESGOTADO</div>
+            </div>
 
-          <div class="tickets-border tickets-border-bottom">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="tickets-title text-align-center">{{ticket.title}}</div>
+
+            <div class="tickets-text">
+              <div class="tickets-text-event">
+                <div>Dev</div>
+                <div>Paraná</div>
+                <div>Conf 2019</div>
+              </div>
+              <div class="tickets-text-date">
+                <div class="tickets-span">Data</div>
+                {{ticket.date}}
+              </div>
+              <div class="tickets-text-value">
+                <div class="tickets-span">Valor</div>
+                <span class="span-value">{{'R$' + ticket.value}}</span>
+              </div>
+              <div class="tickets-btn">
+                <a
+                  :href="ticket.link"
+                  class="btn btn-primary btn-full"
+                  v-disabled="!ticket.soldout"
+                >Comprar tickets</a>
+              </div>
+            </div>
+
+            <div class="tickets-border tickets-border-bottom">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!--
+      <!--
     <div class="shop container align-items-center justify-content-between wrap">
       <div class="shop--info flex-basis-500 flex-grow-1">
         <div class>
@@ -93,11 +98,12 @@
       <div class="shop--image flex-basis-400 flex-grow-1 container align-center">
         <img src="~/assets/images/t-shirt-blue.jpg" width="100%" alt="Camiseta DevParaná 2018">
       </div>
-    </div>-->
-    <form id="form-camiseta">
-      <input type="hidden" name="iot" value="button">
-      <input type="hidden" name="code" :value="tshirtSize">
-    </form>
+      </div>-->
+      <form id="form-camiseta">
+        <input type="hidden" name="iot" value="button">
+        <input type="hidden" name="code" :value="tshirtSize">
+      </form>
+    </div>
   </div>
 </template>
 

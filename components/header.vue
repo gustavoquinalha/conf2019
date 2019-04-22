@@ -94,14 +94,14 @@ export default {
 
 <style lang="scss" scoped>
 .bg-header {
-  background: url("~/assets/images/header.svg");
-  background-position: 90% 100%;
-  background-size: 600px;
+  background: url("~/assets/images/header.svg"), url("~/assets/images/header-bg.svg");
+  background-position: 90% 100%, top center;
+  background-size: 600px, contain;
   background-repeat: no-repeat;
-  transition: .3s;
+  transition: 0.3s;
   @media (max-width: 768px) {
-    background-position: 40vw 50%;
-  background-size: 100vw;
+    background-position: 40vw 50%, top left;
+    background-size: 100vw, 800px;
   }
 }
 
@@ -126,7 +126,8 @@ export default {
 
   .box {
     &-1 {
-      background: url("~/assets/images/box-1.svg");
+      background: $color-1;
+      background: url("~/assets/images/box-1.svg"), $color-1;
       background-position: center center;
       background-size: cover;
       color: $color-4;
@@ -135,7 +136,8 @@ export default {
       }
     }
     &-2 {
-      background: url("~/assets/images/box-2.svg");
+      background: $color-3;
+      background: url("~/assets/images/box-2.svg"), $color-3;
       background-position: center center;
       background-size: cover;
       color: $color-1;
@@ -144,7 +146,8 @@ export default {
       }
     }
     &-3 {
-      background: url("~/assets/images/box-3.svg");
+      background: $color-1;
+      background: url("~/assets/images/box-3.svg"), $color-1;
       background-position: center center;
       background-size: cover;
       color: $color-white;
@@ -153,7 +156,8 @@ export default {
       }
     }
     &-4 {
-      background: url("~/assets/images/box-4.svg");
+      background: $color-3;
+      background: url("~/assets/images/box-4.svg"), $color-3;
       background-position: center center;
       background-size: cover;
       color: $color-white;

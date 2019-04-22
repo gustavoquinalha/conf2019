@@ -3,14 +3,14 @@
 <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 320 205" style="enable-background:new 0 0 320 205;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#15A04B;}
-	.st1{fill:none;stroke:#062417;stroke-width:5;}
+	.st0{fill:none;}
+	.st1{fill:#062417;}
 	.st2{fill:#092E17;}
 	.st3{fill:#004425;}
 </style>
-<rect class="st0" width="320" height="205"/>
 <ellipse class="st0" cx="45.5" cy="198.6" rx="42.5" ry="42.1"/>
-<ellipse class="st1" cx="45.5" cy="198.6" rx="40" ry="39.6"/>
+<path class="st1" d="M45.5,240.7C22.1,240.7,3,221.8,3,198.6s19.1-42.1,42.5-42.1S88,175.4,88,198.6S68.9,240.7,45.5,240.7z
+	 M45.5,161.5C24.8,161.5,8,178.1,8,198.6s16.8,37.1,37.5,37.1S83,219.1,83,198.6S66.2,161.5,45.5,161.5z"/>
 <ellipse class="st2" cx="316.5" cy="65.9" rx="79.5" ry="78.7"/>
 <g>
 	<circle class="st3" cx="60.4" cy="-12.1" r="4.7"/>

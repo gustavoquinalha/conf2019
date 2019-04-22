@@ -98,6 +98,7 @@ export default {
 
 <style lang="scss" scoped>
 $size-menu: 60px;
+
 .menu--relative {
   position: relative;
   height: $size-menu;
@@ -118,7 +119,7 @@ $size-menu: 60px;
     // padding-top: 40px;
     .menu--content--logo {
       img {
-        width: 60px;
+        width: 90px;
         max-width: 100%;
       }
     }

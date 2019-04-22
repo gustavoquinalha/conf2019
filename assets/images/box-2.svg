@@ -3,16 +3,12 @@
 <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 320 205" style="enable-background:new 0 0 320 205;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#074D2D;}
-	.st1{fill:#007841;}
-	.st2{fill:none;stroke:#FFFFFF;stroke-width:5;}
-	.st3{fill:#092E17;}
+	.st0{fill:#007841;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#092E17;}
 </style>
-<rect class="st0" width="320" height="205"/>
-<ellipse class="st1" cx="63.5" cy="205.5" rx="32.5" ry="32.2"/>
-<g>
-	<ellipse class="st0" cx="29.5" cy="4.5" rx="66.5" ry="65.9"/>
-	<ellipse class="st2" cx="29.5" cy="4.5" rx="64" ry="63.4"/>
-</g>
-<ellipse class="st3" cx="318.5" cy="42.1" rx="79.5" ry="78.7"/>
+<ellipse class="st0" cx="63.5" cy="205.5" rx="32.5" ry="32.2"/>
+<path class="st1" d="M29.5,70.4C-7.2,70.4-37,40.8-37,4.5s29.8-65.9,66.5-65.9S96-31.8,96,4.5S66.2,70.4,29.5,70.4z M29.5-56.4
+	C-4.4-56.4-32-29.1-32,4.5s27.6,60.9,61.5,60.9S91,38.1,91,4.5S63.4-56.4,29.5-56.4z"/>
+<ellipse class="st2" cx="318.5" cy="42.1" rx="79.5" ry="78.7"/>
 </svg>

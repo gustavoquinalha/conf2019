@@ -16,13 +16,13 @@ export const state = () => ({
       description: 'Turicas (aka Álvaro Justen) é programador, professor, hipnotista e dependente químico de cafés especiais.',
       twitter: 'https://twitter.com/turicas',
       github: 'https://github.com/turicas'
-    },{
+    }, {
       id: 3,
       name: 'Guilherme Souza',
       image: 'guilherme',
       role: 'São Paulo/SP - Brasil',
       description: 'CTO na Revmob e tem 10 anos de experiência com EcmaScript'
-    },{
+    }, {
       id: 4,
       name: 'Carlos dos Santos',
       image: 'carlos',
@@ -186,7 +186,7 @@ de dados públicas em formatos acessíveis.`
       tag: ['remote', 'trabalho remoto'],
       description: 'Apesar de ter muitos benefícios, trabalho remoto não é um mar de rosas. Existem diversas complexidades adicionais enfrentadas por uma equipe que trabalha remotamente, principalmente em projetos complexos. Inicar trabalho remoto em uma equipe que trabalhava localmente pode ser um desafio ainda maior. Nessa talk vou falar sobre como lidar com esses problemas, e demonstrar como temos resolvido as complexidades que envolvem o trabalho remoto na engenharia de produtos da Locaweb.'
     }, {
-      id: 12,
+      id: 13,
       time: '18:20',
       title: 'ENCERRAMENTO',
       name: '',
@@ -198,7 +198,7 @@ de dados públicas em formatos acessíveis.`
       id: 1,
       value: 40,
       title: 'Lote Promocional',
-      date: '05 de Maio até acabar',
+      date: '05 de Maio até esgotar',
       link: 'https://www.sympla.com.br/devparana-conference-2018__281357',
       soldout: true
     }, {
@@ -302,15 +302,15 @@ de dados públicas em formatos acessíveis.`
     name: 'Sociedade Rural de Maringá',
     address: 'http://www.srm.org.br/',
     image: 'srm'
-    }, {
-      id: 5,
-      name: 'Software by Maringá',
-      address: 'http://www.softwarebymaringa.com.br/',
-      image: 'sbm'
-    }, {
-      id: 6,
-      name: 'Umbler',
-      address: 'https://www.umbler.com/br',
-      image: 'umbler'
-    }]
+  }, {
+    id: 5,
+    name: 'Software by Maringá',
+    address: 'http://www.softwarebymaringa.com.br/',
+    image: 'sbm'
+  }, {
+    id: 6,
+    name: 'Umbler',
+    address: 'https://www.umbler.com/br',
+    image: 'umbler'
+  }]
 })

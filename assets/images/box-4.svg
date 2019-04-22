@@ -4,15 +4,13 @@
 	 viewBox="0 0 320 205" style="enable-background:new 0 0 320 205;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
-	.st1{fill:#004425;}
-	.st2{fill:#15A04B;}
-	.st3{fill:none;stroke:#15A04B;stroke-width:5;}
+	.st1{fill:#15A04B;}
+	.st2{fill:none;stroke:#15A04B;stroke-width:5;}
 </style>
 <rect x="-1" y="0.1" class="st0" width="320" height="205"/>
-<rect class="st1" width="320" height="205"/>
-<ellipse class="st2" cx="75.5" cy="179.8" rx="50.5" ry="50"/>
-<ellipse class="st1" cx="326.5" cy="71.9" rx="94.5" ry="93.6"/>
-<ellipse class="st3" cx="326.5" cy="71.9" rx="92" ry="91.1"/>
-<rect x="-23" y="-9.9" class="st1" width="66" height="65.4"/>
-<rect x="-20.5" y="-7.4" class="st3" width="61" height="60.4"/>
+<ellipse class="st1" cx="75.5" cy="179.8" rx="50.5" ry="50"/>
+<ellipse class="st0" cx="326.5" cy="71.9" rx="94.5" ry="93.6"/>
+<ellipse class="st2" cx="326.5" cy="71.9" rx="92" ry="91.1"/>
+<rect x="-23" y="-9.9" class="st0" width="66" height="65.4"/>
+<rect x="-20.5" y="-7.4" class="st2" width="61" height="60.4"/>
 </svg>

@@ -72,6 +72,11 @@
 // }
 
 .tickets {
+  background-image: url("~/assets/images/tickets.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
   .tickets--item {
     padding: 20px;
     box-sizing: border-box;
@@ -80,12 +85,64 @@
   }
 }
 
+.ticket-1 .tickets--item--content {
+  background-color: $color-2;
+  background-image: url("~/assets/images/ticket-1.svg");
+  background-position: center center;
+  background-size: cover;
+
+  &:hover {
+    background-color: $color-1;
+  }
+}
+
+.ticket-2 .tickets--item--content {
+  background-color: $color-2;
+  background-image: url("~/assets/images/ticket-2.svg");
+  background-position: center center;
+  background-size: cover;
+
+  &:hover {
+    background-color: $color-1;
+  }
+}
+
+.ticket-3 .tickets--item--content {
+  background-color: $color-2;
+  background-image: url("~/assets/images/ticket-3.svg");
+  background-position: center center;
+  background-size: cover;
+
+  &:hover {
+    background-color: $color-1;
+  }
+}
+
+.ticket-4 .tickets--item--content {
+  background: $color-2;
+  background-image: url("~/assets/images/ticket-4.svg");
+  background-position: center center;
+  background-size: cover;
+
+  &:hover {
+    background-color: $color-1;
+  }
+}
+
 .tickets--item--content {
   cursor: pointer;
-  background: $color-1;
+  background-color: $color-1;
   transition: 0.3s;
   margin-bottom: 50px;
   position: relative;
+
+  .btn {
+    background: transparent;
+
+    &:hover {
+      background: $color-2;
+    }
+  }
 
   .tickets--item--content--button {
     position: absolute;
@@ -94,44 +151,38 @@
     display: none;
     z-index: 100;
   }
-  // &.active,
-  // &:focus,
-  // &:hover {
-  //   .tickets--item--content--button {
-  //     display: block;
-  //   }
-  //   transform: scale(1.1, 1.1);
-  //   background: $color-1;
-  //   border: 2px solid $color-4;
-  //   color: $color-4;
-  //   .tickets--item--content--info {
-  //     .date {
-  //       color: $color-white;
-  //       font-weight: bold;
-  //     }
-  //   }
-  //   .tickets--item--content--title {
-  //     border-left: 2px solid $color-4;
-  //     color: $color-4;
-  //   }
-  // }
+
+  &.active,
+  &:focus,
+  &:hover {
+    transform: scale(1.15, 1.15);
+    background-color: $color-1;
+  }
 }
 
 .tickets--item--content.soldout {
-  background: $color-1;
+  background: $color-3;
   color: $color-4;
   position: relative;
   overflow: hidden;
   pointer-events: none;
+
+  .btn {
+    background: $color-3;
+    color: $color-4;
+  }
+
   .tickets--item--content--info {
     .date {
       color: $color-4;
     }
   }
+
   .tickets--item--content--title {
     border-color: $color-4;
     color: $color-4;
   }
+
   .soldout-span {
     position: absolute;
     top: 0;
@@ -145,20 +196,13 @@
     align-items: center;
     font-weight: bold;
     font-size: 2rem;
+
     div {
       transform: rotate(-35deg);
     }
   }
-  &::after {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    content: "";
-    text-align: center;
-    display: block;
-    position: absolute;
-  }
 }
+
 
 .tickets--item--content {
   padding: 40px 20px 20px 20px;
@@ -172,19 +216,19 @@
   display: flex;
   justify-content: space-around;
 
-   span {
-     min-width: 20px;
-     width: 20px;
-     height: 20px;
-     background: $color-4;
-     display: block;
-     border-radius: 50%;
-   }
+  span {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    background: $color-4;
+    display: block;
+    border-radius: 50%;
+  }
 
-   &.tickets-border-bottom {
-     top: initial;
-     bottom: -10px;
-   }
+  &.tickets-border-bottom {
+    top: initial;
+    bottom: -10px;
+  }
 }
 
 .tickets-title {
@@ -199,7 +243,8 @@
 
 .tickets-text {
   text-align: left;
-  > div {
+
+  >div {
     margin-bottom: 20px;
   }
 }
@@ -223,4 +268,5 @@
 .tickets-text-value {
   font-weight: bold;
   font-size: 24px;
+  min-height: 90px;
 }

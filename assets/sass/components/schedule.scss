@@ -1,4 +1,11 @@
 .schedule {
+  background-image: url("~/assets/images/schedule.svg"), url("~/assets/images/schedule-2.svg"), url("~/assets/images/schedule-3.svg");
+  background-position: top center, center center, bottom center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.schedule-container {
   margin: 0 auto;
   width: 800px;
   max-width: 100%;
@@ -40,16 +47,21 @@
     }
 
     &.active {
-      color: $color-1;
+      color: $color-white;
 
       .schedule--item--description {
-        background: url("~/assets/images/box-4.svg");
+        background: $color-2;
+        background: url("~/assets/images/box-4.svg"), $color-2;
         background-position: center center;
         background-size: cover;
         color: $color-white;
 
         .subtitle {
-          color: $color-1;
+          color: $color-4;
+        }
+
+        p {
+          opacity: 1;
         }
       }
 
@@ -95,5 +107,6 @@
   .subtitle {
     margin-bottom: 20px;
     display: block;
+    color: $color-1;
   }
 }
