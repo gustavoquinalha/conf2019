@@ -1,6 +1,6 @@
 module.exports = {
   router: {
-    base: "/conf/"
+    base: "/conf2019/"
   },
   /*
   ** Headers of the page
