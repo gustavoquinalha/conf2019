@@ -38,6 +38,7 @@
   "devDependencies": {
     "@gustavoquinalha/buttons-css": "^1.0.1",
     "babel-eslint": "^8.2.1",
+    "cross-env": "^5.2.0",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
